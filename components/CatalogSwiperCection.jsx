@@ -70,19 +70,19 @@ export default function CatalogSwiperSection() {
 
                 >
                     <SwiperSlide>
-                        <Image src="/image/swiper1.jpg" alt="LOGO" width={520} height={220} className="w-full" />
+                        <Image src="/image/swiper1.jpg" alt="Modern Interior Design" width={520} height={220} className="w-full" unoptimized />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Image src="/image/swiper2.jpg" alt="LOGO" width={520} height={220} className="w-full" />
+                        <Image src="/image/swiper2.jpg" alt="Modern Interior Design" width={520} height={220} className="w-full" unoptimized />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Image src="/image/swiper3.jpg" alt="LOGO" width={520} height={220} className="w-full" />
+                        <Image src="/image/swiper3.jpg" alt="Modern Interior Design" width={520} height={220} className="w-full" unoptimized />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Image src="/image/swiper4.jpg" alt="LOGO" width={520} height={220} className="w-full" />
+                        <Image src="/image/swiper4.jpg" alt="Modern Interior Design" width={520} height={220} className="w-full" unoptimized />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Image src="/image/swiper5.jpg" alt="LOGO" width={520} height={220} className="w-full" />
+                        <Image src="/image/swiper5.jpg" alt="Modern Interior Design" width={520} height={220} className="w-full" unoptimized />
                     </SwiperSlide>
                 </Swiper>
             </div>

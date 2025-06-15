@@ -39,7 +39,14 @@ export default function CatalogueSection() {
             {items.map((item) => (
                 <div key={item.id} className="relative overflow-hidden group">
                     <div>
-                        <Image src={item.image} width={380} height={100} alt="" className="w-full " />
+                        <Image 
+                            src={item.image} 
+                            width={380} 
+                            height={100} 
+                            alt={item.title}
+                            className="w-full"
+                            unoptimized
+                        />
                     </div>
                     <div className="absolute top-0 p-8 m-12 bg-white bg-opacity-60 backdrop-blur">
                         <div className="flex justify-between pb-4 ">
@@ -56,7 +63,6 @@ export default function CatalogueSection() {
                         <span className="">
                             {item.id}
                         </span>
-
                     </div>
                 </div>
             ))}

@@ -20,17 +20,22 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Close mobile menu when route changes
+    useEffect(() => {
+        setIsMenuOpen(false);
+    }, [pathname]);
+
     return (
         <>
             <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
                 <div className="w-full">
-                    <div className={`bg-blue-900/40 backdrop-blur-sm shadow-lg px-4 md:px-8 py-4 md:py-6 flex items-center justify-between min-h-[100px] md:min-h-[120px] transition-all duration-300 ${isScrolled ? 'bg-blue-900/60 shadow-xl' : ''}`}>
+                    <div className={`bg-blue-900/40 backdrop-blur-sm shadow-lg px-4 md:px-8 py-4 md:py-6 flex items-center justify-between min-h-[80px] md:min-h-[120px] transition-all duration-300 ${isScrolled ? 'bg-blue-900/60 shadow-xl' : ''}`}>
                         {/* Logo */}
                         <div 
                             onClick={() => setIsLocationModalOpen(true)}
-                            className="relative w-[250px] md:w-[350px] h-[80px] md:h-[120px] transition-all duration-300 hover:scale-105 hover:brightness-105 hover:drop-shadow-xl group cursor-pointer z-[60]"
+                            className="relative w-[180px] md:w-[350px] h-[60px] md:h-[120px] transition-all duration-300 hover:scale-105 hover:brightness-105 hover:drop-shadow-xl group cursor-pointer z-[60]"
                         >
-                            <div className="absolute inset-x-5 md:inset-x-10 inset-y-2 bg-gray-100/80 backdrop-blur-md rounded-xl shadow-sm transform transition-all duration-300 group-hover:shadow-md">
+                            <div className="absolute inset-x-3 md:inset-x-10 inset-y-2 bg-gray-100/80 backdrop-blur-md rounded-xl shadow-sm transform transition-all duration-300 group-hover:shadow-md">
                                 <div className="absolute inset-0 bg-gradient-to-br from-gray-50/90 to-gray-100/80 rounded-xl"></div>
                             </div>
                             <div className="relative z-[70] h-full">
@@ -39,7 +44,7 @@ const Header = () => {
                                     alt="SRI SAI INTERIORS Logo"
                                     fill
                                     quality={100}
-                                    sizes="(max-width: 768px) 250px, 350px"
+                                    sizes="(max-width: 768px) 180px, 350px"
                                     className="object-contain p-2 transition-all duration-300"
                                     priority
                                     style={{
@@ -51,7 +56,15 @@ const Header = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
                         </div>
 
-                        {/* Company Name */}
+                        {/* Company Name - Mobile */}
+                        <div className="md:hidden relative transform hover:scale-105 transition-transform duration-300">
+                            <h1 className="text-xl font-noto-serif font-bold text-white [text-shadow:_0_0_30px_rgba(255,255,255,0.5)] tracking-wide">
+                                SRI SAI INTERIORS
+                            </h1>
+                            <div className="w-full h-1 bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500 rounded-full mt-1 shadow-[0_0_30px_rgba(251,191,36,0.7),_0_0_60px_rgba(251,191,36,0.4)]"></div>
+                        </div>
+
+                        {/* Company Name - Desktop */}
                         <div className="hidden md:block relative ml-2 transform hover:scale-105 transition-transform duration-300">
                             <h1 className="text-3xl md:text-4xl font-noto-serif font-bold text-white [text-shadow:_0_0_30px_rgba(255,255,255,0.5)] tracking-wide">
                                 SRI SAI INTERIORS
@@ -86,7 +99,8 @@ const Header = () => {
                         {/* Mobile Menu Button */}
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="md:hidden text-white p-2"
+                            className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors duration-300"
+                            aria-label="Toggle menu"
                         >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 {isMenuOpen ? (
@@ -101,27 +115,28 @@ const Header = () => {
             </header>
 
             {/* Mobile Menu */}
-            {isMenuOpen && (
-                <div className="md:hidden bg-blue-900/45 backdrop-blur-lg">
-                    <div className="px-4 pt-4 pb-6 space-y-3">
-                        <Link href="/" className={`block px-4 py-3 text-white text-xl hover:text-white hover:text-3xl hover:font-semibold hover:bg-white/5 rounded-lg transition-all duration-300 ease-in-out ${pathname === '/' ? 'text-white font-semibold bg-white/10' : ''}`}>
+            <div className={`md:hidden fixed inset-0 z-40 transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}></div>
+                <div className={`absolute right-0 top-0 bottom-0 w-[280px] bg-blue-900/95 backdrop-blur-lg transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                    <div className="px-4 pt-20 pb-6 space-y-2">
+                        <Link href="/" className={`block px-4 py-3 text-white text-xl hover:text-white hover:text-2xl hover:font-semibold hover:bg-white/5 rounded-lg transition-all duration-300 ease-in-out ${pathname === '/' ? 'text-white font-semibold bg-white/10' : ''}`}>
                             Home
                         </Link>
-                        <Link href="/about" className={`block px-4 py-3 text-white text-xl hover:text-white hover:text-3xl hover:font-semibold hover:bg-white/5 rounded-lg transition-all duration-300 ease-in-out ${pathname === '/about' ? 'text-white font-semibold bg-white/10' : ''}`}>
+                        <Link href="/about" className={`block px-4 py-3 text-white text-xl hover:text-white hover:text-2xl hover:font-semibold hover:bg-white/5 rounded-lg transition-all duration-300 ease-in-out ${pathname === '/about' ? 'text-white font-semibold bg-white/10' : ''}`}>
                             About Us
                         </Link>
-                        <Link href="/projects" className={`block px-4 py-3 text-white text-xl hover:text-white hover:text-3xl hover:font-semibold hover:bg-white/5 rounded-lg transition-all duration-300 ease-in-out ${pathname === '/projects' ? 'text-white font-semibold bg-white/10' : ''}`}>
+                        <Link href="/projects" className={`block px-4 py-3 text-white text-xl hover:text-white hover:text-2xl hover:font-semibold hover:bg-white/5 rounded-lg transition-all duration-300 ease-in-out ${pathname === '/projects' ? 'text-white font-semibold bg-white/10' : ''}`}>
                             Projects
                         </Link>
-                        <Link href="/gallery" className={`block px-4 py-3 text-white text-xl hover:text-white hover:text-3xl hover:font-semibold hover:bg-white/5 rounded-lg transition-all duration-300 ease-in-out ${pathname === '/gallery' ? 'text-white font-semibold bg-white/10' : ''}`}>
+                        <Link href="/gallery" className={`block px-4 py-3 text-white text-xl hover:text-white hover:text-2xl hover:font-semibold hover:bg-white/5 rounded-lg transition-all duration-300 ease-in-out ${pathname === '/gallery' ? 'text-white font-semibold bg-white/10' : ''}`}>
                             Gallery
                         </Link>
-                        <Link href="/contact" className={`block px-4 py-3 text-white text-xl hover:text-white hover:text-3xl hover:font-semibold hover:bg-white/5 rounded-lg transition-all duration-300 ease-in-out ${pathname === '/contact' ? 'text-white font-semibold bg-white/10' : ''}`}>
+                        <Link href="/contact" className={`block px-4 py-3 text-white text-xl hover:text-white hover:text-2xl hover:font-semibold hover:bg-white/5 rounded-lg transition-all duration-300 ease-in-out ${pathname === '/contact' ? 'text-white font-semibold bg-white/10' : ''}`}>
                             Contact
                         </Link>
                     </div>
                 </div>
-            )}
+            </div>
 
             <LocationModal 
                 isOpen={isLocationModalOpen}
