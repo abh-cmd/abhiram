@@ -312,11 +312,11 @@ export default function About() {
                                     </div>
                                 </div>
                                 <div className="relative">
-                                    <div className="absolute -top-4 -left-4 text-6xl text-amber-500/20 font-noto-serif">"</div>
+                                    <div className="absolute -top-4 -left-4 text-6xl text-amber-500/20 font-noto-serif">&ldquo;</div>
                                     <p className="text-gray-300 font-noto-sans leading-relaxed relative z-10">
                                         Sri Sai Interiors transformed our home into a masterpiece. Their attention to detail and commitment to quality is unmatched. The team&apos;s professionalism and creative solutions made the entire process smooth and enjoyable.
                                     </p>
-                                    <div className="absolute -bottom-4 -right-4 text-6xl text-amber-500/20 font-noto-serif rotate-180">"</div>
+                                    <div className="absolute -bottom-4 -right-4 text-6xl text-amber-500/20 font-noto-serif rotate-180">&rdquo;</div>
                                 </div>
                                 <div className="mt-6 flex items-center gap-1">
                                     {[...Array(5)].map((_, i) => (
@@ -345,11 +345,11 @@ export default function About() {
                                     </div>
                                 </div>
                                 <div className="relative">
-                                    <div className="absolute -top-4 -left-4 text-6xl text-amber-500/20 font-noto-serif">"</div>
+                                    <div className="absolute -top-4 -left-4 text-6xl text-amber-500/20 font-noto-serif">&ldquo;</div>
                                     <p className="text-gray-300 font-noto-sans leading-relaxed relative z-10">
                                         Working with Sri Sai Interiors was a game-changer for our business space. Their innovative designs and efficient execution exceeded our expectations. The team&apos;s expertise in commercial interiors is truly remarkable.
                                     </p>
-                                    <div className="absolute -bottom-4 -right-4 text-6xl text-amber-500/20 font-noto-serif rotate-180">"</div>
+                                    <div className="absolute -bottom-4 -right-4 text-6xl text-amber-500/20 font-noto-serif rotate-180">&rdquo;</div>
                                 </div>
                                 <div className="mt-6 flex items-center gap-1">
                                     {[...Array(5)].map((_, i) => (
