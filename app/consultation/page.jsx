@@ -101,7 +101,7 @@ export default function Consultation() {
                                 variants={textVariants}
                                 className="text-xl text-gray-200 font-noto-sans max-w-2xl mx-auto leading-relaxed"
                             >
-                                Let's create your dream space together. Fill out the form below and our design experts will get in touch with you.
+                                Let&apos;s create your dream space together. Fill out the form below and our design experts will get in touch with you.
                             </motion.p>
                         </motion.div>
 
@@ -227,7 +227,7 @@ export default function Consultation() {
                                                 variants={textVariants}
                                                 className="text-gray-300 group-hover/item:text-white transition-colors duration-300"
                                             >
-                                                Saiinteriors2015@gmail.com
+                                                Saiinteriors2015&#64;gmail.com
                                             </motion.span>
                                         </motion.div>
                                         <motion.div 

@@ -69,7 +69,7 @@ export default function Gallery() {
                         </h2>
                         <div className="w-20 h-1 bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500 rounded-full mb-6 shadow-[0_0_20px_rgba(251,191,36,0.5),_0_0_40px_rgba(251,191,36,0.3)]"></div>
                         <p className="text-lg md:text-xl text-gray-200 font-noto-sans leading-relaxed">
-                            Each image in our gallery represents a unique story of transformation, where we've combined innovative design concepts with practical functionality. From contemporary minimalism to classic elegance, our portfolio showcases our versatility and attention to detail in creating spaces that inspire and delight.
+                            Each image in our gallery represents a unique story of transformation, where we&apos;ve combined innovative design concepts with practical functionality. From contemporary minimalism to classic elegance, our portfolio showcases our versatility and attention to detail in creating spaces that inspire and delight.
                         </p>
                     </div>
                 </motion.div>

@@ -11,7 +11,7 @@ const ContactSection = () => {
                     <div className="flex flex-col items-center p-6 bg-amber-100 rounded-lg shadow-md">
                         <HiOutlineMail className="text-4xl text-gray-700 mb-4" />
                         <p className="text-lg font-medium text-gray-800 mb-2">Email Address</p>
-                        <a href="mailto:Saiinteriors2015@gmail.com" className="text-gray-600 hover:underline">Saiinteriors2015@gmail.com</a>
+                        <a href="mailto:Saiinteriors2015@gmail.com" className="text-gray-600 hover:underline">Saiinteriors2015&#64;gmail.com</a>
                     </div>
 
                     {/* Phone */}

@@ -70,7 +70,7 @@ export default function About() {
                         >
                             <div className="prose prose-lg prose-invert max-w-none">
                                 <p className="text-gray-300 font-noto-sans leading-relaxed text-lg md:text-xl">
-                                    At Sri Sai Interiors, we don't just design spaces; we weave dreams into reality. With a deep understanding of aesthetics and a touch of Indian soul, we transform houses into homes filled with warmth, harmony, and unique character. Our dedication to quality craftsmanship and client trust has been recognized with accolades from around the globe. Choose Sri Sai Interiors, where your vision meets our artistry.
+                                    At Sri Sai Interiors, we don&apos;t just design spaces; we weave dreams into reality. With a deep understanding of aesthetics and a touch of Indian soul, we transform houses into homes filled with warmth, harmony, and unique character. Our dedication to quality craftsmanship and client trust has been recognized with accolades from around the globe. Choose Sri Sai Interiors, where your vision meets our artistry.
                                 </p>
                             </div>
                         </motion.div>
@@ -148,7 +148,7 @@ export default function About() {
                                 </div>
                                 <div className="p-8 relative z-10">
                                     <h3 className="text-2xl font-noto-serif font-semibold text-white mb-4 group-hover:text-amber-200 transition-colors duration-300">98% Satisfaction</h3>
-                                    <p className="text-gray-300 font-noto-sans leading-relaxed">Our clients' happiness is our priority, reflected in our consistently high satisfaction ratings.</p>
+                                    <p className="text-gray-300 font-noto-sans leading-relaxed">Our clients&apos; happiness is our priority, reflected in our consistently high satisfaction ratings.</p>
                                 </div>
                                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                             </motion.div>
@@ -314,7 +314,7 @@ export default function About() {
                                 <div className="relative">
                                     <div className="absolute -top-4 -left-4 text-6xl text-amber-500/20 font-noto-serif">"</div>
                                     <p className="text-gray-300 font-noto-sans leading-relaxed relative z-10">
-                                        Sri Sai Interiors transformed our home into a masterpiece. Their attention to detail and commitment to quality is unmatched. The team's professionalism and creative solutions made the entire process smooth and enjoyable.
+                                        Sri Sai Interiors transformed our home into a masterpiece. Their attention to detail and commitment to quality is unmatched. The team&apos;s professionalism and creative solutions made the entire process smooth and enjoyable.
                                     </p>
                                     <div className="absolute -bottom-4 -right-4 text-6xl text-amber-500/20 font-noto-serif rotate-180">"</div>
                                 </div>
@@ -347,7 +347,7 @@ export default function About() {
                                 <div className="relative">
                                     <div className="absolute -top-4 -left-4 text-6xl text-amber-500/20 font-noto-serif">"</div>
                                     <p className="text-gray-300 font-noto-sans leading-relaxed relative z-10">
-                                        Working with Sri Sai Interiors was a game-changer for our business space. Their innovative designs and efficient execution exceeded our expectations. The team's expertise in commercial interiors is truly remarkable.
+                                        Working with Sri Sai Interiors was a game-changer for our business space. Their innovative designs and efficient execution exceeded our expectations. The team&apos;s expertise in commercial interiors is truly remarkable.
                                     </p>
                                     <div className="absolute -bottom-4 -right-4 text-6xl text-amber-500/20 font-noto-serif rotate-180">"</div>
                                 </div>
